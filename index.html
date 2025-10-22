@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Niel Zacary H. Bazar - Tech Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="intro">
+      <h1 class="name">Niel Zacary H. Bazar.</h1>
+      <h2 class="des">IT Professional & Innovator</h2>
+      <div class="picture">
+        <img src="Niel.jpg" alt="Niel Profile Picture">
+      </div>
+    </div>
+  </header>
+
+  <section class="contact-info">
+    <button><i class="fas fa-phone"></i> (+63) 912-297-5079</button>
+    <button><i class="fas fa-envelope"></i> nielzacarybazar@gmail.com</button>
+    <button><i class="fas fa-map-marker-alt"></i> Dipolog City, Zamboanga del Norte</button>
+  </section>
+
+  <section id="about" class="section fade-in">
+    <h2>About Me</h2>
+    <p>I'm a developer about technology, continuous learning, and leveraging innovation to support organizational goals. With a commitment to excellence and collaboration, I strive to contribute to the success and growth of any team I am part of.</p>
+  </section>
+
+  <section id="education" class="section fade-in">
+    <h2>Education</h2>
+    <div class="education-item">
+      <h4>St. Vincent's College Incorporated</h4>
+      <p>Bachelor of Science in Information Technology</p>
+      <span>Graduating 2025</span>
+    </div>
+    <div class="education-item">
+      <h4>Siare National High School</h4>
+      <span>2017 - 2022</span>
+    </div>
+  </section>
+
+  <section id="skills" class="section fade-in">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-item"><strong>Database management
+</strong><div class="progress"><div class="progress-bar" style="width:95%;"></div></div></div>
+      <div class="skill-item"><strong>Programming</strong><div class="progress"><div class="progress-bar" style="width:90%;"></div></div></div>
+      <div class="skill-item"><strong>Cybersecurity and data protection
+</strong><div class="progress"><div class="progress-bar" style="width:85%;"></div></div></div>
+      <div class="skill-item"><strong>System analysis and design
+</strong><div class="progress"><div class="progress-bar" style="width:80%;"></div></div></div>
+    </div>
+  </section>
+
+  <section id="experience" class="section fade-in">
+    <h2>Experience</h2>
+    <div class="experience-item">
+      <h4>System Integration</h4>
+      <p>CyberEdge Technologies</p>
+      <ul>
+        <li>designing, managing, and optimizing databases using MySQL, SQL Server.</li>
+        <li>connecting different software systems or APIs to streamline processes and improve functionality across platforms.</li>
+      </ul>
+    </div>
+    <div class="experience-item">
+      <h4>Web Development</h4>
+      <p>TechNova Solutions</p>
+      <ul>
+        <li>creating desktop or mobile applications using programming languages such as Python, Java, or C#, including testing, debugging, and deployment.</li>
+        <li>designing and building responsive websites or web applications using HTML, CSS, JavaScript, and frameworks like React or Angular.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="gallery" class="section fade-in">
+    <h2>Project Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="pic1.jpg" alt="Tech Project 1"></div>
+      <div class="gallery-item"><img src="pic2.jpg" alt="Tech Project 2"></div>
+      <div class="gallery-item"><img src="pic3.jpg" alt="Tech Project 3"></div>
+      <div class="gallery-item"><img src="pic4.jpg" alt="Tech Project 4"></div>
+    </div>
+  </section>
+
+  <section id="hobbies" class="section fade-in">
+    <h2>Hobbies & Interests</h2>
+    <p> exploring new software, learning about emerging IT trends, and improving my coding and troubleshooting skills.</p>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Niel Zacary H. Bazar | Futuristic Portfolio</p>
+  </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer){
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => { appearOnScroll.observe(fader); });
+  </script>
+
+</body>
+</html>
